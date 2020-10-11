@@ -581,7 +581,7 @@ class CQHttp(AsyncApi):
             return
 
         event_name = ev.name
-        self.logger.info(f'received event: {event_name}')
+        self.logger.debug(f'received event: {event_name}')
 
         if self._message_class and 'message' in ev:
             ev['message'] = self._message_class(ev['message'])
